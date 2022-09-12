@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
 }
+
 .inner {
     height: 100%;
     width: var(--default-layout-width);
@@ -13,16 +14,20 @@
     justify-content: space-between;
 }
 
+.search,
+.search-result {
+    width: 361px;
+}
 
 .search {
     position: relative;
-    width: 361px;
+
     height: 46px;
-    padding-left:  16px;
+    padding-left: 16px;
     display: flex;
     border-radius: 92px;
     background-color: rgba(22, 24, 35, 0.06);
-    border:   1.5px solid transparent;
+    border: 1.5px solid transparent;
 
     input {
         height: 100%;
@@ -33,12 +38,12 @@
         flex: 1;
     }
 
-    input:not(:placeholder-shown) ~ .search-btn{
+    input:not(:placeholder-shown)~.search-btn {
         color: rgba(22, 24, 35, 0.75);
 
     }
 
-    &::after{
+    &::after {
         content: "";
         position: absolute;
         top: 9px;
@@ -47,11 +52,22 @@
         height: 28px;
         background-color: rgba(22, 24, 35, 0.12);
     }
-    &:focus-within{
+
+    &:focus-within {
         border-color: rgba(22, 24, 35, 0.2);
     }
 
 }
+
+.search-title {
+    height: 30px;
+    padding: 5px 12px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: rgba(22, 24, 35, 0.5);
+}
+
 .clear,
 .loading {
     position: absolute;
@@ -59,9 +75,10 @@
     top: 50%;
     transform: translateY(-50%);
     color: rgba(22, 24, 35, 0.34);
-    padding-right:16px;
+    padding-right: 16px;
 
 }
+
 .search-btn {
     width: 52px;
     height: 100%;
@@ -71,12 +88,12 @@
     color: rgba(22, 24, 35, 0.34);
     cursor: pointer;
 
-    &:hover{
+    &:hover {
         background-color: rgba(22, 24, 35, 0.03);
     }
 
-    &:active{
-        background-color:  rgba(22, 24, 35, 0.06);
+    &:active {
+        background-color: rgba(22, 24, 35, 0.06);
     }
-    
+
 }
