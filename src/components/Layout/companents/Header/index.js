@@ -4,6 +4,11 @@ import {
   faSpinner,
   faMagnifyingGlass,
   faPlus,
+
+  faEllipsisVertical,
+  faLanguage,
+  faQuestion,
+  faKeyboard,
 } from "@fortawesome/free-solid-svg-icons";
 import Button from "~/components/Button";
 import { Wrapper as PopperWrapper } from "~/components/Popper";
@@ -12,8 +17,28 @@ import Tippy from "@tippyjs/react/headless";
 import classNames from "classnames/bind";
 import { useEffect, useState } from "react";
 import AcountItem from "~/components/AccountItem";
+import Menu from "~/components/Popper/Menu";
 
 const cx = classNames.bind(styles);
+
+const MENU_ITEMS = [
+    {
+      icon : <FontAwesomeIcon icon={faLanguage}/>,
+      title : 'Tiếng Việt',
+    },
+
+    {
+      icon : <FontAwesomeIcon icon={faQuestion}/>,
+      title : 'Phản hồi và trợ giúp',
+      to: '/feedback',
+    },
+
+    {
+      icon : <FontAwesomeIcon icon={faKeyboard}/>,
+      title : 'Phím tắt ',
+    }
+];
+
 function Header() {
   const [searchResult, setSearchResult] = useState([]);
   useEffect(() => {
@@ -132,6 +157,14 @@ function Header() {
             Tải lên
           </Button>
           <Button primary>Đăng ký</Button>
+
+          <Menu
+            items ={MENU_ITEMS}
+          >
+          <button className={cx('more-btn')}>
+            <FontAwesomeIcon icon={faEllipsisVertical}/>
+          </button>
+          </Menu>
         </div>
       </div>
     </header>

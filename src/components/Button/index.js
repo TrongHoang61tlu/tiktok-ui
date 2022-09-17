@@ -11,6 +11,7 @@ function Button({
   text = false,
   rounded = false,
   icon,
+  menuitem =false,
   small = false,
   large = false,
   children,
@@ -33,6 +34,7 @@ function Button({
     text,
     rounded,
     icon,
+    menuitem,
     small,
     large,
   });
