@@ -37,6 +37,7 @@ function Button({
     menuitem,
     small,
     large,
+    to
   });
   return (
     <Comp className={classes} {...props}>

@@ -98,10 +98,29 @@
 
 }
 
+.actions{
+    display: flex;
+    align-items: center;
+}
+
 .more-btn{
     font-size: 2rem;
     margin-left: 30px;
     padding: 6px;
     background: none;
+    cursor: pointer;
+}
+.action-btn{
+    background-color: transparent;
+    color: #161823;
+    font-size: 2.2rem;
+    padding: 4px 12px;
+    cursor: pointer;
 }
 
+.user-avt{
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+}
