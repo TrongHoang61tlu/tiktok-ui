@@ -8,8 +8,6 @@ import {
   faLanguage,
   faQuestion,
   faKeyboard,
-  faMessage,
-  faBell,
   faUser,
   faCoins,
   faGear,
@@ -27,6 +25,8 @@ import classNames from "classnames/bind";
 import { useEffect, useState } from "react";
 import AcountItem from "~/components/AccountItem";
 import Menu from "~/components/Popper/Menu";
+import { MessIcon, Notify } from "~/components/icons";
+
 
 const cx = classNames.bind(styles);
 
@@ -222,10 +222,10 @@ const handleMenuChange =(MenuItem) => {
                 </Button >
               </Tippy>
               <button className={cx('action-btn')}>
-                <FontAwesomeIcon icon={faMessage} />
+                <MessIcon />
               </button>
               <button  className={cx('action-btn')}>
-                <FontAwesomeIcon icon={faBell} />
+                  <Notify />
               </button>
             </>
           ) : (
@@ -239,7 +239,7 @@ const handleMenuChange =(MenuItem) => {
           <Menu items= {currentUser ?userMenu : MENU_ITEMS} onChange={handleMenuChange}>
             {currentUser ? (
               <img
-                src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/0f85234bfaa37b6d626db139b6bec70a~c5_100x100.jpeg?x-expires=1663675200&x-signature=9MmqCKromTWTQUllT8HBi5FlX0E%3D"
+                src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/0f85234bfaa37b6d626db139b6bec70a~c5_100x100.jpeg?x-expires=1663808400&amp;x-signature=pzkztsHSVswbgAxJIZ3QueN10DI%3D"
                 className={cx("user-avt")}
                 alt=" "
               />
@@ -256,3 +256,5 @@ const handleMenuChange =(MenuItem) => {
 }
 
 export default Header;
+
+
