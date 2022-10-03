@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import request from "~/utils/request";
 import {
   faCircleXmark,
   faMagnifyingGlass,
@@ -28,10 +29,15 @@ function Search() {
       return;
     }
     setLoadding(true);
-    fetch( `https://tiktok.fullstack.edu.vn/api/users/search?q=${encodeURIComponent(debounce)}&type=less`)
-    .then(res => res.json())
+
+    request.get( 'users/search', {
+      params: {
+        q: debounce,
+        type: 'less'
+      }
+    })
     .then(res =>{
-      setSearchResult(res.data);
+      setSearchResult(res.data.data);
       setLoadding(false);
     })
     .catch(() =>{
