@@ -23,6 +23,8 @@ import Menu from "~/components/Popper/Menu";
 import { MessIcon, Notify } from "~/components/icons";
 import Image from "~/components/Image";
 import Search from "../Search";
+import { Link } from "react-router-dom";
+import routerConfig from '~/components/config/routers';
 
 const cx = classNames.bind(styles);
 
@@ -101,6 +103,7 @@ function Header() {
   return (
     <header className={cx("wrapper")}>
       <div className={cx("inner")}>
+        <Link to = {routerConfig.home}>
         <div className={cx("logo")}>
           <svg height="42" width="118" alt="TikTok">
             <g clipPath="url(#clip0)">
@@ -176,6 +179,7 @@ function Header() {
             </defs>
           </svg>
         </div>
+        </Link>
 
         <Search />
 
@@ -209,9 +213,9 @@ function Header() {
             {currentUser ? (
               <Image
                 className={cx("user-avt")}
-                src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/0f85234bfaa37b6d626db139b6bec70a~c5_100x100.jpeg?x-expires=1663808400&amp;x-signature=pzkztsHSVswbgAxJIZ3QueN10DI%3D"
+                src=""
                 alt=" "
-                fallback="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/0f85234bfaa37b6d626db139b6bec70a~c5_100x100.jpeg?x-expires=1664337600&amp;x-signature=xJhiGe63zt4xphnUqOdzjcasZsA%3D"
+                fallback="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-aiso/65a22a192cea434401d66ada6df5b3df~c5_720x720.jpeg?x-expires=1665043200&amp;x-signature=1GDtyPUbfYrZ8zE8fKtAqZmRNwA%3D"
               />
             ) : (
               <button className={cx("more-btn")}>
@@ -226,4 +230,5 @@ function Header() {
 }
 
 export default Header;
+
 
