@@ -24,12 +24,13 @@ import { MessIcon, Notify } from "~/components/icons";
 import Image from "~/components/Image";
 import Search from "../Search";
 import { Link } from "react-router-dom";
-import routerConfig from '~/components/config/routers';
+import routerConfig from '~/config/routers';
 
 const cx = classNames.bind(styles);
 
 const MENU_ITEMS = [
   {
+    
     icon: <FontAwesomeIcon icon={faLanguage} />,
     title: "Tiếng Việt",
     children: {
@@ -38,6 +39,54 @@ const MENU_ITEMS = [
         {
           code: "en",
           title: "English",
+        },
+        {
+          code: "vi",
+          title: "Tiếng Việt",
+        },
+        {
+          code: "vi",
+          title: "Tiếng Việt",
+        },
+        {
+          code: "vi",
+          title: "Tiếng Việt",
+        },
+        {
+          code: "vi",
+          title: "Tiếng Việt",
+        },
+        {
+          code: "vi",
+          title: "Tiếng Việt",
+        },
+        {
+          code: "vi",
+          title: "Tiếng Việt",
+        },
+        {
+          code: "vi",
+          title: "Tiếng Việt",
+        },
+        {
+          code: "vi",
+          title: "Tiếng Việt",
+        },
+        {
+          code: "vi",
+          title: "Tiếng Việt",
+        },
+        {
+          code: "vi",
+          title: "Tiếng Việt",
+        },
+        {
+          code: "vi",
+          title: "Tiếng Việt",
+        },
+        {
+          code: "vi",
+          title: "Tiếng Việt",
         },
         {
           code: "vi",
@@ -206,23 +255,25 @@ function Header() {
               <Button primary>Đăng ký</Button>
             </>
           )}
-          <Menu
-            items={currentUser ? userMenu : MENU_ITEMS}
-            onChange={handleMenuChange}
-          >
-            {currentUser ? (
-              <Image
-                className={cx("user-avt")}
-                src=""
-                alt=" "
-                fallback="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-aiso/65a22a192cea434401d66ada6df5b3df~c5_720x720.jpeg?x-expires=1665043200&amp;x-signature=1GDtyPUbfYrZ8zE8fKtAqZmRNwA%3D"
-              />
-            ) : (
-              <button className={cx("more-btn")}>
-                <FontAwesomeIcon icon={faEllipsisVertical} />
-              </button>
-            )}
-          </Menu>
+          <div className={cx('menu-body')}>
+            <Menu
+              items={currentUser ? userMenu : MENU_ITEMS}
+              onChange={handleMenuChange}
+            >
+              {currentUser ? (
+                <Image
+                  className={cx("user-avt")}
+                  src=""
+                  alt=" "
+                  fallback="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-aiso/65a22a192cea434401d66ada6df5b3df~c5_720x720.jpeg?x-expires=1665043200&amp;x-signature=1GDtyPUbfYrZ8zE8fKtAqZmRNwA%3D"
+                />
+              ) : (
+                <button className={cx("more-btn")}>
+                  <FontAwesomeIcon icon={faEllipsisVertical} />
+                </button>
+              )}
+            </Menu>
+          </div>
         </div>
       </div>
     </header>
