@@ -205,7 +205,7 @@ function Header() {
               <Button text icon={<FontAwesomeIcon icon={faPlus} />}>
                 Tải lên
               </Button>
-              <Button primary>Đăng ký</Button>
+              <Button primary >Đăng ký</Button>
             </>
           )}
           <div className={cx('menu-body')}>
