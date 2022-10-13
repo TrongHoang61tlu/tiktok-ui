@@ -19,10 +19,10 @@ function AccountPreview() {
         </h4>
         <p className={cx("name")}>Hoanh</p>
         <p className={cx('analytics')}>
-            <strong className={cx('value')}>8.2M</strong>
-            <span className={cx('label')}>Like</span>
-            <strong className={cx('value')}>8.2M</strong>
-            <span className={cx('label')}>Like</span>
+            <strong className={cx('value')}> 8.2M </strong>
+            <span className={cx('label')}> Follower </span>
+            <strong className={cx('value')}> 8.2M </strong>
+            <span className={cx('label')}> Like </span>
         </p>
       </div>
     </div>

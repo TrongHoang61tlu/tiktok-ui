@@ -4,6 +4,7 @@ import config from "~/config";
 import Menu, {MenuItem} from "./Menu";
 import { HomeIcon, LiveIcon, UserIcon } from "~/components/icons";
 import SuggestedAccounts from "~/components/SuggestedAccounts";
+import Hashtag from "~/components/Hashtag";
 const cx = classNames.bind(styles);
 function SideBar() {
   return <aside className={cx("wrapper")}>
@@ -15,6 +16,8 @@ function SideBar() {
 
     <SuggestedAccounts label="Tài khoản được đề xuất" />
     <SuggestedAccounts label="Tài khoản đã theo dõi" />
+
+    <Hashtag label="Khám phá"/>
   </aside>;
 }
 
