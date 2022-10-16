@@ -8,14 +8,6 @@ function Hashtag({label}) {
         <div className={cx('wrapper')}>
             <p className={cx('label')}>{label}</p>
             <HashtagItem/>
-            <HashtagItem/>
-            <HashtagItem/>
-            <HashtagItem/>
-            <HashtagItem/>
-            <HashtagItem/>
-            <HashtagItem/>
-            <HashtagItem/>
-            <HashtagItem/>
         </div>
         
     );
