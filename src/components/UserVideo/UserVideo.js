@@ -1,14 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { Videos } from "../Video";
 import classNames from "classnames/bind";
 import styles from "./UserVideo.module.scss"
 import Image from "../Image";
 import Button from "../Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faComment, faHeart, faShare } from "@fortawesome/free-solid-svg-icons";
 
 
 const cx = classNames.bind(styles);
 
 function UserVideo() {
+    const [like,setLike] = useState({likes :false});
+
+    const handleLike = () =>{
+        setLike({
+            ...like,
+            likes : !like.likes
+        }
+            
+            );
+    }
+ 
+
     return (
         <div className={cx("container")}>
         
@@ -36,7 +50,26 @@ function UserVideo() {
                     <Videos/>
                 </div>
                 <div className={cx("list-item")}>
+                    <button onClick={handleLike} className={cx("value")}>
+                        {!like.likes ? (
+
+                            <span className={cx("icon")} ><FontAwesomeIcon icon={faHeart}  /> </span>
+                        ) :(
+                            <span className={cx("iconed")} ><FontAwesomeIcon icon={faHeart} /> </span>  
+                        ) }
                     
+                        <strong className={cx("label")}>0</strong>
+                    </button>
+                    <button className={cx("value")}>
+                        <span className={cx("icon")}><FontAwesomeIcon icon={faComment} /> </span>
+                    
+                        <strong className={cx("label")}>0</strong>
+                    </button>
+                    <button className={cx("value")}>
+                        <span className={cx("icon")}><FontAwesomeIcon icon={faShare} /> </span>
+                    
+                        <strong className={cx("label")}>0</strong>
+                    </button>
                 </div>
             </div>
         </div>

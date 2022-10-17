@@ -1,4 +1,4 @@
-.container{
+.container {
     width: 100%;
     display: flex;
     margin-left: 100px;
@@ -6,35 +6,74 @@
 }
 
 
-.avt-image{
+.avt-image {
     width: 56px;
     height: 56px;
     border-radius: 50%;
 }
 
-.main{
+.main {
     width: 70%;
     margin-left: 15px;
 }
 
-.main-top{
+.main-top {
     display: flex;
     justify-content: space-between;
 }
 
-.main-bot{
-   display: flex ;
-}
-.content{
+.content {
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 12px;
     margin-top: 15px;
 }
-.name{
+
+.name {
     margin-bottom: 10px;
 }
 
-.button{
+.button {
     margin-left: 50px;
+}
+
+.main-bot {
+    display: flex;
+}
+
+.list-item {
+    margin-top: 250px;
+    padding: 20px;
+
+
+}
+
+.value {
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    display: grid;
+    font-size: 2rem;
+    background-color: rgb(22 24 35 / 6%);
+    padding: 10px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+
+}
+
+.icon {
+    margin-bottom: 20px;
+
+}
+
+.iconed{
+    margin-bottom: 20px;
+    color: red;
+}
+
+.label {
+    color: rgba(22, 24, 35, .75);
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
 }
