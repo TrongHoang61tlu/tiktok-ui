@@ -1,6 +1,8 @@
+import UserVideo from "~/components/UserVideo";
+
 function Following() {
     return ( 
-        <h1>Following Page</h1>
+        <UserVideo />
      );
 }
 

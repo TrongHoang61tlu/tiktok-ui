@@ -1,8 +1,10 @@
 .container {
     width: 100%;
     display: flex;
-    margin-left: 100px;
-    margin-top: 20px;
+    margin-top: 50px;
+    justify-content:center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(22, 24, 35, .2);
 }
 
 
@@ -63,7 +65,7 @@
 
 .icon {
     margin-bottom: 20px;
-
+    cursor: pointer;
 }
 
 .iconed{

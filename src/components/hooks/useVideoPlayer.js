@@ -4,7 +4,7 @@ const useVideoPlayes = (videoElement)=> {
     const [player, setPlayer] =useState({
         isPlaying: true,
         process: 0,
-        isMuted: false,
+        isMuted: true,
     });
 
     const togglePlay = () => {
